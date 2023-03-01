@@ -1,0 +1,42 @@
+###
+### A complete description of a Prefect Deployment for flow 'main flow'
+###
+name: demo_ecs_fargate_flow
+description: null
+version: ff23cfa0a99a74d8debb12766fdd853d
+# The work queue that will handle this deployment's runs
+work_queue_name: default
+tags: []
+parameters: {}
+schedule: null
+infra_overrides: {}
+infrastructure:
+  type: process
+  env: {}
+  labels: {}
+  name: null
+  command: null
+  stream_output: true
+  working_dir: null
+  block_type_slug: process
+  _block_type_slug: process
+
+###
+### DO NOT EDIT BELOW THIS LINE
+###
+flow_name: main flow
+manifest_path: null
+storage: null
+path: /home/bee_nyah/Desktop/DATA ENGINEERING 2023/PROJECTS/project2-demo/ecs-fargate-prefect-demo
+entrypoint: demo_file.py:demo_flow
+parameter_openapi_schema:
+  title: Parameters
+  type: object
+  properties:
+    param:
+      title: param
+      position: 0
+      type: integer
+  required:
+  - param
+  definitions: null

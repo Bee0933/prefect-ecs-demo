@@ -1,0 +1,9 @@
+infra/.terraform/*
+infra/*.tfvars
+infra/*.tfvars.*
+infra/crash.log
+infra/crash.*.log
+infra/terraform.tfstate
+infra/terraform.tfstate.*
+infra/.terraform.lock.hcl
+__pycache__/*

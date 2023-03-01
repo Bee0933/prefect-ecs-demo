@@ -1,0 +1,2 @@
+- create vpc with module including subnets for 2 regions
+- create fargate with prefect recipee
