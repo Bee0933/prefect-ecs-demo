@@ -1,5 +1,8 @@
 provider "aws" {
-  region = var.avail_zone
+  region                   = var.avail_zone
+  shared_config_files      = ["~/.aws/config"]
+  shared_credentials_files = ["~/.aws/credentials"]
+  profile                  = "default"
 }
 
 module "vpc" {
@@ -24,7 +27,7 @@ module "prefect_ecs_agent" {
     module.vpc.public_subnets[0],
     module.vpc.public_subnets[1]
   ]
-  name                 = "${var.env_prefix}_prefect_agent_demo1"
+  name                 = "${var.env_prefix}_prefect_agent_demo_01"
   prefect_account_id   = var.prefect_account_id
   prefect_api_key      = var.prefect_api_key
   prefect_workspace_id = var.prefect_workspace_id
