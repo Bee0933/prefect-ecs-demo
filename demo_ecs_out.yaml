@@ -1,0 +1,86 @@
+###
+### A complete description of a Prefect Deployment for flow 'main flow'
+###
+name: demo_ecs_fargate_flow
+description: null
+version: ec02421e98481b8bd7844af823a30a7c
+# The work queue that will handle this deployment's runs
+work_queue_name: default
+tags: []
+parameters: {}
+schedule: null
+infra_overrides: {}
+
+###
+### DO NOT EDIT BELOW THIS LINE
+###
+flow_name: main flow
+manifest_path: null
+infrastructure:
+  type: ecs-task
+  env: {}
+  labels: {}
+  name: null
+  command: null
+  aws_credentials:
+    aws_access_key_id: AKIAZLKGMCBWBSM6W7OH
+    aws_secret_access_key: '**********'
+    aws_session_token: null
+    profile_name: null
+    region_name: af-south-1
+    aws_client_parameters:
+      api_version: null
+      use_ssl: true
+      verify: true
+      verify_cert_path: null
+      endpoint_url: null
+      config: null
+    _block_document_id: eb1768d2-a662-4ddf-a045-deda39473af1
+    _block_document_name: aws-creds
+    _is_anonymous: false
+    block_type_slug: aws-credentials
+  task_definition_arn: null
+  task_definition: null
+  family: null
+  image: prefecthq/prefect:2.7.7-python3.8
+  auto_deregister_task_definition: true
+  cpu: null
+  memory: null
+  execution_role_arn: arn:aws:iam::642782072940:role/prefect-agent-execution-role-development_prefect_agent_demo_01
+  configure_cloudwatch_logs: null
+  cloudwatch_logs_options: {}
+  stream_output: null
+  launch_type: FARGATE
+  vpc_id: vpc-0f4173442f8176b6d
+  cluster: prefect-agent-development_prefect_agent_demo_01
+  task_role_arn: arn:aws:iam::642782072940:role/prefect-agent-task-role-development_prefect_agent_demo_01
+  task_customizations: []
+  task_start_timeout_seconds: 600
+  task_watch_poll_interval: 5.0
+  _block_document_id: ae09b84a-2405-4c25-b071-3a960bf91e56
+  _block_document_name: ecs-task
+  _is_anonymous: false
+  block_type_slug: ecs-task
+  _block_type_slug: ecs-task
+storage:
+  repository: https://github.com/Bee0933/prefect-ecs-demo
+  reference: null
+  access_token: '**********'
+  _block_document_id: 0ffde3b4-d01d-4f61-a219-85c7acd041ee
+  _block_document_name: github
+  _is_anonymous: false
+  block_type_slug: github
+  _block_type_slug: github
+path: ''
+entrypoint: flows/demo_file.py:demo_flow
+parameter_openapi_schema:
+  title: Parameters
+  type: object
+  properties:
+    param:
+      title: param
+      position: 0
+      type: integer
+  required:
+  - param
+  definitions: null
