@@ -7,7 +7,7 @@ def task1(val:int=5):
     time.sleep(val)
 
 @flow(name='main flow')
-def demo_flow(param:int):
+def demo_flow(param:int=4):
     task1(param)
     
 

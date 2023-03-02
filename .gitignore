@@ -6,4 +6,4 @@ infra/crash.*.log
 infra/terraform.tfstate
 infra/terraform.tfstate.*
 infra/.terraform.lock.hcl
-__pycache__/*
+*__pycache__/*
