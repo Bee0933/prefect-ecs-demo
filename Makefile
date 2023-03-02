@@ -9,9 +9,12 @@ lint:
 	# check code syntaxes
 	pylint --disable=R,C flows/*.py 
 
+build_infra:
+	# build terraform code
+	terraform apply -auto-approve
+
 prefect_depl:
 	# prefect deployment
 	prefect deployment build flows/demo_file.py:demo_flow -ib ecs-task/ecs-task -sb github/github -n "demo_ecs_fargate_flow" --cron "*/1 * * * *" --output demo_ecs_out.yaml --skip-upload --apply
-# depl_apply:
-# 	# apply prefect deployment
-# 	prefect deployment apply demo_flow-deployment.yaml
+
+
